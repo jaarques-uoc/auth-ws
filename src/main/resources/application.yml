@@ -1,0 +1,17 @@
+local-port: 7200
+
+spring:
+  application.name: auth-ws
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/mongodb}
+
+eureka:
+  client.serviceUrl.defaultZone: ${EUREKA_URL:http://localhost:7100/eureka}
+  instance:
+    hostname: ${HOSTNAME:localhost}
+    non-secure-port: ${PUBLIC_PORT:${local-port}}
+    secure-port: ${PUBLIC_PORT:${local-port}}
+
+server:
+  port: ${PORT:${local-port}}
