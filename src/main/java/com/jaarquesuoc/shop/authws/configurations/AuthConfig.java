@@ -28,7 +28,7 @@ public class AuthConfig extends AuthorizationServerConfigurerAdapter {
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory().withClient("my-client")
             .authorizedGrantTypes("client_credentials", "password")
-            .authorities("ROLE_CLIENT", "ROLE_TRUSTED_CLIENT")
+            .authorities("ROLE_USER", "ROLE_ACTUATOR")
             .scopes("read", "write", "trust")
             .resourceIds("oauth2-resource")
             .accessTokenValiditySeconds(3600)

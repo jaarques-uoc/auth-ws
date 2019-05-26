@@ -40,12 +40,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .csrf().disable();
     }
 
-    /**
-     * See: https://github.com/spring-projects/spring-boot/issues/11136
-     *
-     * @return
-     * @throws Exception
-     */
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
