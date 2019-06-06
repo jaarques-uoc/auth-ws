@@ -8,6 +8,6 @@ public class TestController {
 
     @GetMapping("/private")
     public String testPrivate() {
-        return "private";
+        return "Private area";
     }
 }

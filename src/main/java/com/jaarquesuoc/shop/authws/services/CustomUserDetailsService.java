@@ -25,8 +25,8 @@ public class CustomUserDetailsService implements UserDetailsService {
             .username(username)
             .password(passwordEncoder.encode("pwd"))
             .authorities(Arrays.asList(
-                new SimpleGrantedAuthority("USER"),
-                new SimpleGrantedAuthority("ACTUATOR")
+                new SimpleGrantedAuthority("ROLE_USER"),
+                new SimpleGrantedAuthority("ROLE_ACTUATOR")
             ))
             .build())
             .orElseThrow(() -> new UsernameNotFoundException("No user with "
